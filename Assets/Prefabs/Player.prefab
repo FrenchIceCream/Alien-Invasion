@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 3921371688267327053}
   - component: {fileID: 4927647568480087439}
   - component: {fileID: 6230982588685600400}
-  - component: {fileID: 8048986748327523563}
   - component: {fileID: 2094985276534767297}
   - component: {fileID: 5563958259843718901}
+  - component: {fileID: 8048986748327523563}
   - component: {fileID: -2175072985414585869}
-  m_Layer: 0
+  - component: {fileID: 488049566413523506}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,21 +122,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8048986748327523563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8958492150988766541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 834186a1af0555e4c80f086a9b37ed0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 5
-  paddingTop: 4
-  paddingBottom: 1
 --- !u!50 &2094985276534767297
 Rigidbody2D:
   serializedVersion: 4
@@ -200,6 +186,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 0.75}
   m_Direction: 0
+--- !u!114 &8048986748327523563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8958492150988766541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834186a1af0555e4c80f086a9b37ed0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 5
+  paddingTop: 4
+  paddingBottom: 1
 --- !u!114 &-2175072985414585869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,3 +213,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d360b0f2b5dd8488d0f4dcacbf640c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &488049566413523506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8958492150988766541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7364a763837a05f4ab82d50881efbf65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotSpeed: 10
+  projectileLifetime: 5
+  projectilePrefab: {fileID: 7192110011424499105, guid: f3506e46bb1889b48a927c4dfdbe3007, type: 3}
+  shootingRate: 0.2
+  isFiring: 0

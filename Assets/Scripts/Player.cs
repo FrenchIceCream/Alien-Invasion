@@ -13,9 +13,12 @@ public class Player : MonoBehaviour
     Vector2 minBounds;
     Vector2 maxBounds;
 
+    Shooter shoot;
+
     void Awake()
     {
         paddingHorizontal = GetComponent<SpriteRenderer>().bounds.extents.x;
+        shoot = GetComponent<Shooter>();
     }
 
     void Start()
@@ -47,5 +50,9 @@ public class Player : MonoBehaviour
         rawInput = inputValue.Get<Vector2>();
     }
 
-
+    void OnFire(InputValue inputValue)
+    {
+        if (shoot != null)
+            shoot.isFiring = inputValue.isPressed;
+    }
 }
