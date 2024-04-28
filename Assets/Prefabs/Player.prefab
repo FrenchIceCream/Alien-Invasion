@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   hitEffect: {fileID: 658216816415926858, guid: 74b2ae328483c8649aeb72aa1d02ef71, type: 3}
+  shouldShakeOnHit: 1
 --- !u!114 &488049566413523506
 MonoBehaviour:
   m_ObjectHideFlags: 0
