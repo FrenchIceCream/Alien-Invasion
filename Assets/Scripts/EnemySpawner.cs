@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
                 curWave = waveConfigs[j];
                 for (int i = 0; i < curWave.GetEnemyCount(); i++)
                 {
-                    Instantiate(curWave.GetEnemyPrefab(i), curWave.GetFirstWaypoint().position, Quaternion.identity, transform);
+                    Instantiate(curWave.GetEnemyPrefab(i), curWave.GetFirstWaypoint().position, Quaternion.Euler(0,0,180), transform);
                     yield return new WaitForSeconds(curWave.GetSpawnTime());
                 }
                 yield return new WaitForSeconds(timeBetweenWaves);
