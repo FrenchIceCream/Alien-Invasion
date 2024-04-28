@@ -17,16 +17,19 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnEnemyWaves()
     {
-        for (int j = 0; j < waveConfigs.Count; j++)
+        do
         {
-            curWave = waveConfigs[j];
-            for (int i = 0; i < curWave.GetEnemyCount(); i++)
+            for (int j = 0; j < waveConfigs.Count; j++)
             {
-                Instantiate(curWave.GetEnemyPrefab(i), curWave.GetFirstWaypoint().position, Quaternion.identity, transform);
-                yield return new WaitForSeconds(curWave.GetSpawnTime());
+                curWave = waveConfigs[j];
+                for (int i = 0; i < curWave.GetEnemyCount(); i++)
+                {
+                    Instantiate(curWave.GetEnemyPrefab(i), curWave.GetFirstWaypoint().position, Quaternion.identity, transform);
+                    yield return new WaitForSeconds(curWave.GetSpawnTime());
+                }
+                yield return new WaitForSeconds(timeBetweenWaves);
             }
-            yield return new WaitForSeconds(timeBetweenWaves);
         }
-        
+        while (true);
     }
 }
