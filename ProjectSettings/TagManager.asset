@@ -44,3 +44,6 @@ TagManager:
   - name: Ships
     uniqueID: 2294376821
     locked: 0
+  - name: Particles
+    uniqueID: 2371895809
+    locked: 0
