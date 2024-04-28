@@ -5,21 +5,47 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    Vector2 rawInput;
     [SerializeField] float playerSpeed = 5f;
+    [SerializeField] float paddingTop;
+    [SerializeField] float paddingBottom;
+    float paddingHorizontal;
+    Vector2 rawInput;
+    Vector2 minBounds;
+    Vector2 maxBounds;
 
+    void Awake()
+    {
+        paddingHorizontal = GetComponent<SpriteRenderer>().bounds.extents.x;
+    }
+
+    void Start()
+    {
+        InitBounds();
+    }
+    
     void Update()
     {
         Move();
     }
 
+    void InitBounds()
+    {
+        Camera mainCamera = Camera.main;
+        minBounds = mainCamera.ViewportToWorldPoint(new Vector2(0, 0));
+        maxBounds = mainCamera.ViewportToWorldPoint(new Vector2(1, 1));
+    }
+
     void Move()
     {
-        transform.position += new Vector3(rawInput.x, rawInput.y, 0) * Time.deltaTime * playerSpeed;
+        Vector3 offset = rawInput * Time.deltaTime * playerSpeed;
+        transform.position = new Vector2(Mathf.Clamp(transform.position.x + offset.x, minBounds.x + paddingHorizontal, maxBounds.x - paddingHorizontal), 
+                                         Mathf.Clamp(transform.position.y + offset.y, minBounds.y + paddingBottom, maxBounds.y - paddingTop));
     }
 
     void OnMove(InputValue inputValue)
     {
         rawInput = inputValue.Get<Vector2>();
     }
+
+
 }
