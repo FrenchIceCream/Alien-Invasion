@@ -256,7 +256,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2b63bc1825e4f4c90d797352a68da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curWave: {fileID: 11400000, guid: de1feaba4e32c904da496bc996daf356, type: 2}
+  waveConfigs:
+  - {fileID: 11400000, guid: de1feaba4e32c904da496bc996daf356, type: 2}
+  - {fileID: 11400000, guid: 87d297e25e8d5d54194bb8498bcee394, type: 2}
+  timeBetweenWaves: 2
 --- !u!1 &1920856496
 GameObject:
   m_ObjectHideFlags: 0
