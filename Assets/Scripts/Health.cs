@@ -8,10 +8,12 @@ public class Health : MonoBehaviour
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] bool shouldShakeOnHit;
     CameraShake cameraShake;
+    AudioPlayer audioPlayer;
 
     void Awake()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        audioPlayer = FindFirstObjectByType<AudioPlayer>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -31,6 +33,7 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            audioPlayer.PlayExplosionClip();
             PlayParticleEffect();
         }
     }
@@ -49,6 +52,7 @@ public class Health : MonoBehaviour
         if (cameraShake == null || !shouldShakeOnHit)
             return;
         
+        audioPlayer.PlayDamageClip();
         cameraShake.Shake();
     }
 }
