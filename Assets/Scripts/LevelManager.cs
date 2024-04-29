@@ -6,8 +6,16 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] float sceneDelay = 2f;
+    ScoreKeeper scoreKeeper;
+    void Awake()
+    {
+        scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
+    }
+
     public void LoadGame()
     {
+        if (scoreKeeper != null)
+            scoreKeeper.Reset();
         SceneManager.LoadScene("MainScene");
     }
 
@@ -29,7 +37,6 @@ public class LevelManager : MonoBehaviour
     IEnumerator WaitToLoad(string sceneName, float delay)
     {
         yield return new WaitForSeconds(delay);
-        Debug.Log("Load");
         SceneManager.LoadScene(sceneName);
     }
 }

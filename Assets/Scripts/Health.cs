@@ -52,7 +52,6 @@ public class Health : MonoBehaviour
         if (isPlayer)
         {
             levelManager.LoadGameOver();
-            Debug.Log("Die");
         }
         else 
             IncreaseScore();
