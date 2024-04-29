@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     AudioPlayer audioPlayer;
     ScoreKeeper scoreKeeper;
     UIDisplay uiDisplay;
+    LevelManager levelManager;
     public int GetHealth() => health;
 
     void Awake()
@@ -20,6 +21,7 @@ public class Health : MonoBehaviour
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
         uiDisplay = FindFirstObjectByType<UIDisplay>();
+        levelManager = FindFirstObjectByType<LevelManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -37,14 +39,24 @@ public class Health : MonoBehaviour
         health -= damage;
         if (isPlayer)
             uiDisplay.UpdateHealth(health);
+        
         ShakeCamera();
         if (health <= 0)
         {
-            IncreaseScore();
-            Destroy(gameObject);
-            audioPlayer.PlayExplosionClip();
-            PlayParticleEffect();
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        if (isPlayer)
+            levelManager.LoadGameOver();
+        else 
+            IncreaseScore();
+        
+        audioPlayer.PlayExplosionClip();
+        PlayParticleEffect();
+        Destroy(gameObject);
     }
 
     void PlayParticleEffect()
@@ -67,7 +79,7 @@ public class Health : MonoBehaviour
 
     void IncreaseScore()
     {
-        if (scoreKeeper == null || isPlayer)
+        if (scoreKeeper == null)
             return;
         
         scoreKeeper.AddToScore(score);
