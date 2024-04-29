@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     CameraShake cameraShake;
     AudioPlayer audioPlayer;
     ScoreKeeper scoreKeeper;
+    UIDisplay uiDisplay;
     public int GetHealth() => health;
 
     void Awake()
@@ -18,6 +19,7 @@ public class Health : MonoBehaviour
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
+        uiDisplay = FindFirstObjectByType<UIDisplay>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -33,6 +35,8 @@ public class Health : MonoBehaviour
     void TakeDamage(int damage)
     {
         health -= damage;
+        if (isPlayer)
+            uiDisplay.UpdateHealth(health);
         ShakeCamera();
         if (health <= 0)
         {
@@ -63,8 +67,10 @@ public class Health : MonoBehaviour
 
     void IncreaseScore()
     {
-        if (scoreKeeper != null && !isPlayer)
-            scoreKeeper.AddToScore(score);
-        //Debug.Log("Score: " + scoreKeeper.GetScore());
+        if (scoreKeeper == null || isPlayer)
+            return;
+        
+        scoreKeeper.AddToScore(score);
+        uiDisplay.UpdateScore(scoreKeeper.GetScore());
     }
 }
