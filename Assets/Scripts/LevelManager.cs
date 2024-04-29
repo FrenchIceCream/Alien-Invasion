@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadGameOver()
     {
-        WaitToLoad("GameOver", sceneDelay);
+        StartCoroutine(WaitToLoad("GameOver", sceneDelay));
     }
 
     public void QuitGame()
@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
     IEnumerator WaitToLoad(string sceneName, float delay)
     {
         yield return new WaitForSeconds(delay);
+        Debug.Log("Load");
         SceneManager.LoadScene(sceneName);
     }
 }

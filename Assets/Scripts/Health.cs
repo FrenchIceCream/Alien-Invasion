@@ -50,7 +50,10 @@ public class Health : MonoBehaviour
     private void Die()
     {
         if (isPlayer)
+        {
             levelManager.LoadGameOver();
+            Debug.Log("Die");
+        }
         else 
             IncreaseScore();
         
