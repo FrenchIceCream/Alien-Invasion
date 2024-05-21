@@ -671,7 +671,15 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: de1feaba4e32c904da496bc996daf356, type: 2}
   - {fileID: 11400000, guid: 87d297e25e8d5d54194bb8498bcee394, type: 2}
-  timeBetweenWaves: 2
+  - {fileID: 11400000, guid: 5c51e86ad768fdb4eb50e5d03689ecbd, type: 2}
+  - {fileID: 11400000, guid: 7dcf4c40bdabd3e41bea1e0da0d2d7d0, type: 2}
+  - {fileID: 11400000, guid: aeba4c2de4f498942b8e07a99019d478, type: 2}
+  - {fileID: 11400000, guid: d6ea15428fce9d147a69a0bef2dd3e8b, type: 2}
+  - {fileID: 11400000, guid: 1e8d125a1e13d7a4ea3d45ede79ed80f, type: 2}
+  - {fileID: 11400000, guid: de1feaba4e32c904da496bc996daf356, type: 2}
+  - {fileID: 11400000, guid: 87d297e25e8d5d54194bb8498bcee394, type: 2}
+  - {fileID: 11400000, guid: 1eb9cd20b74c92a448669cfccb79e6bf, type: 2}
+  timeBetweenWaves: 4
 --- !u!1 &1130240148
 GameObject:
   m_ObjectHideFlags: 0

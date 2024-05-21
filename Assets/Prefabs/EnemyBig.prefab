@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 4085767955629411631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.127, z: 0}
+  m_LocalScale: {x: 1.2546, y: 1.2546, z: 1.2546}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8571886499435705019}
@@ -220,9 +220,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0030519962, y: 0.022268474}
-  m_Size: {x: 0.8330654, y: 0.8330654}
-  m_Direction: 0
+  m_Offset: {x: 0.0089070555, y: 0.03711361}
+  m_Size: {x: 0.9755854, y: 0.9072988}
+  m_Direction: 1
 --- !u!114 &-6288386316617298984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d360b0f2b5dd8488d0f4dcacbf640c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  score: 70
+  health: 500
+  score: 150
   hitEffect: {fileID: 658216816415926858, guid: 74b2ae328483c8649aeb72aa1d02ef71, type: 3}
   isPlayer: 0
 --- !u!114 &3841173536780307255
@@ -264,10 +264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7364a763837a05f4ab82d50881efbf65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpeed: 8
-  projectileLifetime: 1
+  shotSpeed: 4
+  projectileLifetime: 4
   projectilePrefab: {fileID: 7192110011424499105, guid: 665076c37b7a1a14dac0c67dc301480f, type: 3}
-  shootingRate: 0.8
+  shootingRate: 2
   useAI: 1
   shootingRandomness: 0.1
   minShootingRate: 0.2
