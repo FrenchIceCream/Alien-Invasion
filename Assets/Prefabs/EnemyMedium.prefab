@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6746493771557092816}
   - component: {fileID: 6983780902423959025}
-  - component: {fileID: 6524295243462739525}
+  - component: {fileID: 8286662656260188539}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -2000590475
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5132784597741030218, guid: 28bc3c21a38f5254e91e06b51f1a53b4, type: 3}
+  m_Sprite: {fileID: -2393196760129817674, guid: d3a6d6fc38e044e45be173f1bf168000, type: 3}
   m_Color: {r: 1, g: 0.93643445, b: 0.37647057, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6524295243462739525
+--- !u!95 &8286662656260188539
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 4085767955629411631}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 76f5829787bf9144591c3dd838b9908a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0be9b475bb1243a42b38831f8d285cea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 3841173536780307255}
   - component: {fileID: -5038433241116181773}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: EnemyMedium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,9 +220,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 0.5}
-  m_Direction: 0
+  m_Offset: {x: -0.015550585, y: 0.000000001853774}
+  m_Size: {x: 0.8897014, y: 0.5000041}
+  m_Direction: 1
 --- !u!114 &-6288386316617298984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d360b0f2b5dd8488d0f4dcacbf640c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  score: 50
+  health: 100
+  score: 70
   hitEffect: {fileID: 658216816415926858, guid: 74b2ae328483c8649aeb72aa1d02ef71, type: 3}
   isPlayer: 0
 --- !u!114 &3841173536780307255
@@ -269,6 +269,6 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7192110011424499105, guid: e2b2c10197f47424598c311cf73cd959, type: 3}
   shootingRate: 1
   useAI: 1
-  shootingRandomness: 0
+  shootingRandomness: 0.1
   minShootingRate: 0.2
   isFiring: 0

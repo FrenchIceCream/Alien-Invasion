@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6746493771557092816}
   - component: {fileID: 6983780902423959025}
-  - component: {fileID: 6524295243462739525}
+  - component: {fileID: 8286662656260188539}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -2000590475
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5132784597741030218, guid: 28bc3c21a38f5254e91e06b51f1a53b4, type: 3}
+  m_Sprite: {fileID: -7871563040996269557, guid: b35874d6a5272ab4284ee02566c0edbb, type: 3}
   m_Color: {r: 1, g: 0.93643445, b: 0.37647057, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6524295243462739525
+--- !u!95 &8286662656260188539
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 4085767955629411631}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 76f5829787bf9144591c3dd838b9908a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6b34e627221600542ab2c16ba5df0f85, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 3841173536780307255}
   - component: {fileID: -5038433241116181773}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: EnemyBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,8 +220,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 0.5}
+  m_Offset: {x: 0.0030519962, y: 0.022268474}
+  m_Size: {x: 0.8330654, y: 0.8330654}
   m_Direction: 0
 --- !u!114 &-6288386316617298984
 MonoBehaviour:
@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d360b0f2b5dd8488d0f4dcacbf640c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  score: 50
+  health: 100
+  score: 70
   hitEffect: {fileID: 658216816415926858, guid: 74b2ae328483c8649aeb72aa1d02ef71, type: 3}
   isPlayer: 0
 --- !u!114 &3841173536780307255
@@ -264,11 +264,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7364a763837a05f4ab82d50881efbf65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpeed: 10
+  shotSpeed: 8
   projectileLifetime: 1
-  projectilePrefab: {fileID: 7192110011424499105, guid: e2b2c10197f47424598c311cf73cd959, type: 3}
-  shootingRate: 1
+  projectilePrefab: {fileID: 7192110011424499105, guid: 665076c37b7a1a14dac0c67dc301480f, type: 3}
+  shootingRate: 0.8
   useAI: 1
-  shootingRandomness: 0
+  shootingRandomness: 0.1
   minShootingRate: 0.2
   isFiring: 0

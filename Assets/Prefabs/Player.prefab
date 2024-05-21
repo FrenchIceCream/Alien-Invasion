@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8048986748327523563}
   - component: {fileID: -2175072985414585869}
   - component: {fileID: 488049566413523506}
+  - component: {fileID: 2685585772696700715}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -237,3 +238,25 @@ MonoBehaviour:
   shootingRandomness: 0
   minShootingRate: 0.2
   isFiring: 0
+--- !u!95 &2685585772696700715
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8958492150988766541}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c32c0355161551840b1dbd953b9af750, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
